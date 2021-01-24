@@ -1,0 +1,213 @@
+@media (max-width: 1400px) {
+  .promo .slick-prev,
+  .promo .slick-next {
+    display: none;
+  }
+  .slick-prev,
+  .slick-next {
+    display: none;
+  }
+}
+@media (max-width: 1285px) {
+  .parts__item {
+    max-width: 260px;
+  }
+  .parts__box-price {
+    font-size: 17px;
+  }
+}
+@media (max-width: 1285px) {
+  .connection .connection__adress,
+  .connection__mail,
+  .connection__skype,
+  .connection__phones {
+    text-align: left;
+  }
+  .connection__inner {
+    display: block;
+    .connection__link {
+      display: block;
+      text-align: center;
+    }
+  }
+}
+@media (max-width: 1050px) {
+  .menu__list-item + .menu__list-item {
+    margin-left: 5px;
+  }
+  .header__mail {
+    display: none;
+  }
+}
+@media (max-width: 959px) {
+  .parts__box-more {
+    padding: 6px 6px;
+  }
+}
+@media (max-width: 878px) {
+  .header__phone {
+    display: none;
+  }
+
+  .connection__inner {
+    display: block;
+    text-align: center;
+    column-count: 0;
+  }
+}
+@media (max-width: 769px) {
+  .promo .advertising__title {
+    font-size: 24px;
+    line-height: 32px;
+  }
+  .dignities__item-info {
+    font-size: 14px;
+    line-height: 24px;
+  }
+  .questions__title {
+    font-size: 18px;
+    line-height: 26px;
+  }
+  .parts__title {
+    font-size: 24px;
+    line-height: 32px;
+  }
+  .header__call {
+    display: none;
+  }
+  .header__phones img {
+    left: 45px;
+  }
+  .questions__wrapper {
+    display: block;
+    text-align: center;
+  }
+  .questions__title {
+    max-width: 100%;
+  }
+}
+@media (max-width: 700px) {
+  .slider-dots {
+    display: none;
+  }
+}
+@media (max-width: 683px) {
+  .parts__item {
+    max-width: 240px;
+  }
+}
+@media (max-width: 654px) {
+  .footer__inner {
+    display: block;
+  }
+  .header__phones img {
+    left: 0;
+  }
+  .parts__box {
+    text-align: center;
+    display: block;
+  }
+  .footer__copy{
+    display: block;
+  }
+}
+
+@media (max-width: 561px) {
+  .promo .advertising__title {
+    font-size: 18px;
+    line-height: 26px;
+  }
+  .promo .advertising__text {
+    font-weight: normal;
+  }
+  .dignities__item {
+    flex-basis: 49%;
+  }
+  .header__logo {
+    margin-left: 50px;
+  }
+  .menu__btn {
+    display: block;
+    width: 24px;
+    cursor: pointer;
+    height: 24px;
+    position: absolute;
+    left: 40px;
+    top: 49px;
+  }
+  .menu__btn span {
+    display: block;
+    margin-bottom: 5px;
+    background: #929aab;
+    height: 2px;
+  }
+  .menu__list {
+    display: none;
+    position: absolute;
+    top: 85px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 10;
+    background-color: #fff;
+    .menu__list-item {
+      text-align: center;
+      display: block;
+      margin: 0;
+    }
+    .menu__list-link {
+      padding: 12px 0;
+      display: block;
+      transition: all 0.3s;
+      &:hover {
+        background: #3dbaf2;
+        color: #ffffff;
+      }
+    }
+  }
+  .header__phones img {
+    left: 75px;
+  }
+}
+@media (max-width: 500px) {
+  .parts__item {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+  .slick-dots li + li {
+    margin-left: 20px;
+  }
+  .header__phones img {
+    left: 0px;
+  }
+  @media (max-width: 455px) {
+    .dignities__inner {
+      display: block;
+      text-align: center;
+    }
+    .connection__inner {
+      display: block;
+      padding: 0 35px;
+    }
+    .connection__link {
+      display: block;
+      width: 100%;
+      text-align: center;
+    }
+
+    .connection .connection__adress img,
+    .connection__mail img,
+    .connection__skype img,
+    .connection__phones img {
+      left: -25px;
+    }
+    .questions__title {
+      line-height: 24px;
+    }
+  }
+  @media (min-width: 560px) {
+    .menu__list {
+      display: flex !important;
+    }
+  }
+}
