@@ -4,8 +4,12 @@
 
 // start header
 .header {
-  padding: 35px 40px;
-  margin-bottom: 20px;
+  padding: 20px 40px;
+  position: fixed;
+  z-index: 1;
+  background: #fff;
+  display: block;
+  width: 100%;
   &__inner {
     display: flex;
     align-items: center;
@@ -24,9 +28,13 @@
   &__mail {
     font-size: 14px;
     line-height: 24px;
-    color: $blue;
+    color: #333333;
     border-bottom: 1px dashed $blue;
     position: relative;
+    transition: all 0.3s;
+    &:hover {
+      color: $blue;
+    }
     img {
       position: absolute;
       top: 0;
@@ -35,7 +43,7 @@
   }
   &__phones {
     position: relative;
-    img {
+    .header__phone-ico {
       position: absolute;
       top: 50%;
       left: -20px;
@@ -161,6 +169,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
+  margin-top: 100px;
   &__inner {
     position: relative;
   }
@@ -484,7 +493,7 @@
       }
     }
   }
-.slick-dots {
+  .slick-dots {
     position: absolute;
     text-align: center;
     display: block;
@@ -502,7 +511,7 @@
     border: none;
     outline: none;
   }
-.slick-dots li.slick-active button {
+  .slick-dots li.slick-active button {
     background: #3dbaf2;
     width: 60px;
     height: 3px;
@@ -511,7 +520,7 @@
 .slick-slide img {
   width: 100%;
 }
-.slick-dots li+li {
+.slick-dots li + li {
   margin-left: 115px;
 }
 // end parts
@@ -665,6 +674,11 @@
 }
 .fancybox-button svg path {
   fill: #999999;
+}
+.fancybox-button svg {
+  
+    border: 1px solid #999;
+    border-radius: 50%;
 }
 // end popup
 @import "_media";

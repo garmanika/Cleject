@@ -91,8 +91,12 @@ html, body {
 }
 
 .header {
-  padding: 35px 40px;
-  margin-bottom: 20px;
+  padding: 20px 40px;
+  position: fixed;
+  z-index: 1;
+  background: #fff;
+  display: block;
+  width: 100%;
 }
 
 .header__inner {
@@ -122,9 +126,16 @@ html, body {
 .header__mail {
   font-size: 14px;
   line-height: 24px;
-  color: #3dbaf2;
+  color: #333333;
   border-bottom: 1px dashed #3dbaf2;
   position: relative;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.header__mail:hover {
+  color: #3dbaf2;
 }
 
 .header__mail img {
@@ -137,7 +148,7 @@ html, body {
   position: relative;
 }
 
-.header__phones img {
+.header__phones .header__phone-ico {
   position: absolute;
   top: 50%;
   left: -20px;
@@ -276,6 +287,7 @@ html, body {
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
+  margin-top: 100px;
 }
 
 .promo__inner {
@@ -916,6 +928,11 @@ html, body {
   fill: #999999;
 }
 
+.fancybox-button svg {
+  border: 1px solid #999;
+  border-radius: 50%;
+}
+
 @media (max-width: 1400px) {
   .promo .slick-prev,
   .promo .slick-next {
@@ -1062,7 +1079,7 @@ html, body {
     height: 24px;
     position: absolute;
     left: 40px;
-    top: 49px;
+    top: 35px;
   }
   .menu__btn span {
     display: block;
@@ -1073,7 +1090,7 @@ html, body {
   .menu__list {
     display: none;
     position: absolute;
-    top: 85px;
+    top: 75px;
     left: 0;
     right: 0;
     width: 100%;
