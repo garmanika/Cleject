@@ -32,20 +32,24 @@
     border-bottom: 1px dashed $blue;
     position: relative;
     transition: all 0.3s;
+    img {
+      display: none;
+    }
     &:hover {
       color: $blue;
-    }
-    img {
-      position: absolute;
-      top: 0;
-      left: -30px;
+      img {
+        position: absolute;
+        top: 0;
+        left: -30px;
+        display: block;
+      }
     }
   }
   &__phones {
     position: relative;
     .header__phone-ico {
       position: absolute;
-      top: 50%;
+      top: 60%;
       left: -20px;
       transform: translate(-50%, -50%);
     }
@@ -67,7 +71,7 @@
     background: transparent;
     border: 1.5px solid #3dbaf2;
     border-radius: 25px;
-    padding: 5px 10px;
+    padding: 4px 14px;
     cursor: pointer;
     transition: all 0.3s;
     &:hover {
@@ -163,12 +167,16 @@
 }
 // end header
 // start promo
+.advertising__sliderinner {
+  margin: -33px;
+}
 .promo {
   min-height: 530px;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
+  background-image: url(../images/content/slider.png);
   margin-top: 100px;
   &__inner {
     position: relative;
@@ -203,7 +211,7 @@
       color: #ffffff;
       border: 1.5px solid #ffffff;
       border-radius: 25px;
-      padding: 12px 20px;
+      padding: 14px 25px;
       transition: all 0.3s;
       &:hover {
         color: #333333;
@@ -364,11 +372,13 @@
 .dignities {
   padding-top: 26px;
   padding-bottom: 86px;
+
   &__inner {
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+    padding: 10px;
   }
   &__item {
     text-align: center;
@@ -436,11 +446,10 @@
     line-height: 44px;
     margin-bottom: 80px;
     display: block;
-    position: relative;
     img {
-      position: absolute;
-      bottom: -16px;
-      left: 49%;
+      display: block;
+      margin: 0 auto;
+      margin-top: 10px;
     }
   }
   &__items {
@@ -676,9 +685,8 @@
   fill: #999999;
 }
 .fancybox-button svg {
-  
-    border: 1px solid #999;
-    border-radius: 50%;
+  border: 1px solid #999;
+  border-radius: 50%;
 }
 // end popup
 @import "_media";

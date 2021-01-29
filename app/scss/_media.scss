@@ -39,9 +39,21 @@
     display: none;
   }
 }
-@media (max-width: 959px) {
+@media (max-width: 961px) {
   .parts__box-more {
     padding: 6px 6px;
+  }
+  .questions__title {
+    max-width: 540px;
+  }
+  .promo {
+    background-image: url(../images/content/slider-960.png);
+    &__inner {
+      padding-left: 47px;
+    }
+    .advertising {
+      padding: 31px 38px;
+    }
   }
 }
 @media (max-width: 878px) {
@@ -56,6 +68,13 @@
   }
 }
 @media (max-width: 769px) {
+  .promo {
+    background-image: url(../images/content/slider-768.png);
+    &__inner {
+      padding-left: 39px;
+    }
+    
+  }
   .promo .advertising__title {
     font-size: 24px;
     line-height: 32px;
@@ -107,7 +126,7 @@
     text-align: center;
     display: block;
   }
-  .footer__copy{
+  .footer__copy {
     display: block;
   }
 }
@@ -116,6 +135,12 @@
   .promo .advertising__title {
     font-size: 18px;
     line-height: 26px;
+  }
+  .promo {
+    background-image: url(../images/content/slider-560.png);
+    .advertising {
+      padding: 31px 28px; 
+    }
   }
   .promo .advertising__text {
     font-weight: normal;
@@ -180,34 +205,45 @@
   .header__phones img {
     left: 0px;
   }
-  @media (max-width: 455px) {
-    .dignities__inner {
-      display: block;
-      text-align: center;
-    }
-    .connection__inner {
-      display: block;
-      padding: 0 35px;
-    }
-    .connection__link {
-      display: block;
-      width: 100%;
-      text-align: center;
-    }
+}
+@media (max-width: 455px) {
+  .dignities__inner {
+    display: block;
+    text-align: center;
+  }
+  .connection__inner {
+    display: block;
+    padding: 0 35px;
+  }
+  .connection__link {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
 
-    .connection .connection__adress img,
-    .connection__mail img,
-    .connection__skype img,
-    .connection__phones img {
-      left: -25px;
+  .connection .connection__adress img,
+  .connection__mail img,
+  .connection__skype img,
+  .connection__phones img {
+    left: -25px;
+  }
+  .questions__title {
+    line-height: 24px;
+  }
+}
+@media (max-width: 321px) {
+  .promo {
+    background-image: url(../images/content/slider-320.png);
+    .advertising {
+      padding: 33px 27px;
     }
-    .questions__title {
-      line-height: 24px;
+    &__inner {
+      padding-left: 16px;
     }
   }
-  @media (min-width: 560px) {
-    .menu__list {
-      display: flex !important;
-    }
+}
+@media (min-width: 560px) {
+  .menu__list {
+    display: flex !important;
   }
 }

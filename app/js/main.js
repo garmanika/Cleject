@@ -31,6 +31,7 @@ $(function(){
     slidesToShow: 3,
     slidesToScroll: 3,
     asNavFor: '.advertising__sliderinner',
+    focusOnSelect: true,
 });
 $('.parts__items').slick({
   slidesToShow: 3,
