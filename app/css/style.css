@@ -572,7 +572,6 @@ html, body {
 .questions {
   min-height: 177px;
   background-blend-mode: luminosity, normal;
-  padding: 25px 0;
 }
 
 .questions__wrapper {
@@ -586,6 +585,7 @@ html, body {
       -ms-flex-pack: center;
           justify-content: center;
   min-height: 177px;
+  padding: 20px;
 }
 
 .questions__title {
@@ -611,6 +611,7 @@ html, body {
   -webkit-transition: all 0.3s;
   -o-transition: all 0.3s;
   transition: all 0.3s;
+  white-space: nowrap;
 }
 
 .questions__link:hover {
@@ -984,12 +985,18 @@ html, body {
   }
 }
 
-@media (max-width: 1050px) {
-  .menu__list-item + .menu__list-item {
-    margin-left: 5px;
-  }
+@media (max-width: 1130px) {
   .header__mail {
     display: none;
+  }
+}
+
+@media (max-width: 1050px) {
+  .questions {
+    padding: 0px;
+  }
+  .menu__list-item + .menu__list-item {
+    margin-left: 5px;
   }
 }
 
@@ -1014,6 +1021,9 @@ html, body {
 @media (max-width: 878px) {
   .header__phone {
     display: none;
+  }
+  .header__phones .header__phone-ico {
+    left: 0;
   }
   .connection__inner {
     display: block;
@@ -1060,9 +1070,15 @@ html, body {
   .questions__title {
     max-width: 100%;
   }
+  .header__phones .header__phone-ico {
+    left: 60px;
+  }
 }
 
 @media (max-width: 700px) {
+  .header__phones .header__phone-ico {
+    left: 45px;
+  }
   .slider-dots {
     display: none;
   }
@@ -1075,6 +1091,9 @@ html, body {
 }
 
 @media (max-width: 654px) {
+  .header__phones .header__phone-ico {
+    left: 20px;
+  }
   .footer__inner {
     display: block;
   }
@@ -1091,6 +1110,9 @@ html, body {
 }
 
 @media (max-width: 561px) {
+  .header__phones .header__phone-ico {
+    left: 60px;
+  }
   .promo .advertising__title {
     font-size: 18px;
     line-height: 26px;
@@ -1158,6 +1180,9 @@ html, body {
 }
 
 @media (max-width: 500px) {
+  .header__phones .header__phone-ico {
+    left: 50px;
+  }
   .parts__item {
     max-width: 100%;
     margin: 0 auto;
@@ -1171,6 +1196,9 @@ html, body {
 }
 
 @media (max-width: 455px) {
+  .header__phones .header__phone-ico {
+    left: 0px;
+  }
   .dignities__inner {
     display: block;
     text-align: center;

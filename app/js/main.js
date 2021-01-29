@@ -11,7 +11,6 @@ $(function(){
         breakpoint: 1300,
         settings: {
           arrows: false,
-          
         }
       },
       {
@@ -62,7 +61,6 @@ $('.dots__items').slick({
   slidesToScroll: 3,
   asNavFor: '.parts__items',
 });
-
 
 
 
