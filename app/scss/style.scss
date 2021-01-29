@@ -88,7 +88,6 @@
     border-bottom-color: transparent;
     border-radius: 0px;
     background: transparent;
-    -webkit-box-shadow: none;
     box-shadow: none;
     color: #333;
     text-shadow: transparent;
@@ -148,22 +147,23 @@
       border-bottom: 3px solid $blue;
     }
   }
-
-  .jq-selectbox__dropdown {
-    font-family: "Open Sans", sans-serif;
-    font-weight: bold;
-    font-size: 13px;
-    line-height: 24px;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: #929aab;
-  }
 }
 .jq-selectbox__select,
 .jq-selectbox li:hover,
 .jq-selectbox li.selected {
   background-color: transparent;
   color: $blue;
+}
+.jq-selectbox__dropdown {
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #929aab;
+  font: 13px/24px "Open Sans", sans-serif;
+  border: 1.5px solid #e0e0e0;
+  box-shadow: none;
+  border-radius: 333px;
+  top: -2px;
 }
 // end header
 // start promo
@@ -180,6 +180,7 @@
   margin-top: 100px;
   &__inner {
     position: relative;
+    padding: 0 40px;
   }
   .advertising {
     padding: 30px 40px;
@@ -439,6 +440,7 @@
 // start parts
 .parts {
   padding: 88px 100px;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.02), rgba(0, 0, 0, 0.02)), #F9F9FD;
   &__title {
     text-align: center;
     font-weight: bold;
@@ -446,6 +448,7 @@
     line-height: 44px;
     margin-bottom: 80px;
     display: block;
+
     img {
       display: block;
       margin: 0 auto;
@@ -668,7 +671,6 @@
       text-transform: uppercase;
       background: #3dbaf2;
       border: 1.5px solid #3dbaf2;
-      box-sizing: border-box;
       border-radius: 333px;
       color: #ffffff;
       text-align: center;
