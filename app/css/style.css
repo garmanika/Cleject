@@ -746,7 +746,7 @@ html, body {
 }
 
 .connection {
-  padding: 28px 0;
+  padding: 28px;
 }
 
 .connection__inner {
@@ -977,11 +977,14 @@ html, body {
     text-align: left;
   }
   .connection__inner {
-    display: block;
-  }
-  .connection__inner .connection__link {
-    display: block;
-    text-align: center;
+    display: inline-block;
+    padding: 0 10px;
+    -webkit-column-count: 3;
+       -moz-column-count: 3;
+            column-count: 3;
+    -webkit-column-gap: 110px;
+       -moz-column-gap: 110px;
+            column-gap: 110px;
   }
 }
 
@@ -992,6 +995,23 @@ html, body {
 }
 
 @media (max-width: 1050px) {
+  .connection__inner {
+    -webkit-column-gap: 50px;
+       -moz-column-gap: 50px;
+            column-gap: 50px;
+  }
+  .connection__adress {
+    max-width: 250px;
+  }
+  .connection__skype {
+    max-width: 87px;
+  }
+  .connection__mail {
+    max-width: 160px;
+  }
+  .connection__phones {
+    max-width: 280px;
+  }
   .questions {
     padding: 0px;
   }
@@ -1015,6 +1035,20 @@ html, body {
   }
   .promo .advertising {
     padding: 31px 38px;
+  }
+}
+
+@media (max-width: 900px) {
+  .connection__inner {
+    display: block;
+    -webkit-column-count: 1;
+       -moz-column-count: 1;
+            column-count: 1;
+    margin-top: 25px;
+  }
+  .connection__inner .connection__link {
+    display: block;
+    text-align: center;
   }
 }
 

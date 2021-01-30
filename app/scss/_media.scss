@@ -24,11 +24,10 @@
     text-align: left;
   }
   .connection__inner {
-    display: block;
-    .connection__link {
-      display: block;
-      text-align: center;
-    }
+    display: inline-block;
+    padding: 0 10px;
+    column-count: 3;
+    column-gap: 110px;
   }
 }
 @media (max-width: 1130px) {
@@ -37,6 +36,21 @@
   }
 }
 @media (max-width: 1050px) {
+  .connection__inner {
+    column-gap: 50px;
+  }
+  .connection__adress {
+    max-width: 250px;
+  }
+  .connection__skype {
+    max-width: 87px;
+  }
+  .connection__mail {
+    max-width: 160px;
+  }
+  .connection__phones {
+    max-width: 280px;
+  }
   .questions {
     padding: 0px;
   }
@@ -61,11 +75,22 @@
     }
   }
 }
+@media (max-width: 900px) {
+  .connection__inner {
+    display: block;
+    column-count: 1;
+    margin-top: 25px;
+    .connection__link {
+      display: block;
+      text-align: center;
+    }
+  }
+}
 @media (max-width: 878px) {
   .header__phone {
     display: none;
   }
-  .header__phones .header__phone-ico{
+  .header__phones .header__phone-ico {
     left: 0;
   }
 
@@ -111,14 +136,14 @@
   .questions__title {
     max-width: 100%;
   }
-  .header__phones .header__phone-ico{
+  .header__phones .header__phone-ico {
     left: 60px;
   }
 }
 @media (max-width: 700px) {
-.header__phones .header__phone-ico {
+  .header__phones .header__phone-ico {
     left: 45px;
-}
+  }
   .slider-dots {
     display: none;
   }
@@ -129,9 +154,9 @@
   }
 }
 @media (max-width: 654px) {
-.header__phones .header__phone-ico {
+  .header__phones .header__phone-ico {
     left: 20px;
-}
+  }
   .footer__inner {
     display: block;
   }
@@ -150,7 +175,7 @@
 @media (max-width: 561px) {
   .header__phones .header__phone-ico {
     left: 60px;
-}
+  }
   .promo .advertising__title {
     font-size: 18px;
     line-height: 26px;
@@ -216,7 +241,7 @@
 @media (max-width: 500px) {
   .header__phones .header__phone-ico {
     left: 50px;
-}
+  }
   .parts__item {
     max-width: 100%;
     margin: 0 auto;
@@ -231,7 +256,7 @@
 @media (max-width: 455px) {
   .header__phones .header__phone-ico {
     left: 0px;
-}
+  }
   .dignities__inner {
     display: block;
     text-align: center;
@@ -257,7 +282,6 @@
   }
 }
 @media (max-width: 321px) {
-
   .promo {
     background-image: url(../images/content/slider-320.png);
     .advertising {
