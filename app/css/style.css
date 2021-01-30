@@ -1139,7 +1139,8 @@ html, body {
     display: block;
   }
   .footer__copy {
-    display: block;
+    display: inline-block;
+    padding-right: 50px;
   }
 }
 
