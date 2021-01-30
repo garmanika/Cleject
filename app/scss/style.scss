@@ -465,7 +465,6 @@
   &__item {
     max-width: 350px;
     background-color: #ffffff;
-    min-height: 400px;
     margin: 0 15px;
     padding: 5px;
 
@@ -510,7 +509,7 @@
     position: absolute;
     text-align: center;
     display: block;
-    bottom: 0px;
+    bottom: -20px;
     list-style: none;
     padding: 0;
     margin: 0;
@@ -538,6 +537,20 @@
 }
 // end parts
 // start connection
+.connection__phone-2{
+    position: relative;
+  &::before{
+    content: '';
+    position: absolute;
+    background-image: url(../images/icons/map-marker-alt.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 22px;
+    height: 22px;
+    top: 0;
+    left: -22px;
+  }
+}
 .connection {
   padding: 28px;
   &__inner {

@@ -657,7 +657,6 @@ html, body {
 .parts__item {
   max-width: 350px;
   background-color: #ffffff;
-  min-height: 400px;
   margin: 0 15px;
   padding: 5px;
 }
@@ -715,7 +714,7 @@ html, body {
   position: absolute;
   text-align: center;
   display: block;
-  bottom: 0px;
+  bottom: -20px;
   list-style: none;
   padding: 0;
   margin: 0;
@@ -743,6 +742,22 @@ html, body {
 
 .slick-dots li + li {
   margin-left: 115px;
+}
+
+.connection__phone-2 {
+  position: relative;
+}
+
+.connection__phone-2::before {
+  content: '';
+  position: absolute;
+  background-image: url(../images/icons/map-marker-alt.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 22px;
+  height: 22px;
+  top: 0;
+  left: -22px;
 }
 
 .connection {
@@ -1293,7 +1308,7 @@ html, body {
   }
 }
 
-@media (min-width: 560px) {
+@media (min-width: 561px) {
   .menu__list {
     display: -webkit-box !important;
     display: -ms-flexbox !important;
