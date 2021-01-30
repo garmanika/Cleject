@@ -814,6 +814,10 @@ html, body {
   color: #ffffff;
 }
 
+.connection__mail a {
+  border-bottom: 1px dashed #3dbaf2;
+}
+
 .footer {
   padding: 12px;
 }
@@ -1039,16 +1043,32 @@ html, body {
 }
 
 @media (max-width: 900px) {
+  .connection__adress {
+    max-width: 100%;
+    margin-bottom: 15px;
+  }
+  .connection__phones {
+    max-width: 100%;
+    margin-bottom: 15px;
+  }
+  .connection__mail {
+    max-width: 100%;
+    margin-bottom: 15px;
+  }
+  .connection__skype {
+    max-width: 100%;
+    margin-bottom: 15px;
+  }
   .connection__inner {
     display: block;
     -webkit-column-count: 1;
        -moz-column-count: 1;
             column-count: 1;
-    margin-top: 25px;
   }
-  .connection__inner .connection__link {
+  .connection__link {
     display: block;
     text-align: center;
+    margin-top: 25px;
   }
 }
 
@@ -1231,6 +1251,9 @@ html, body {
 }
 
 @media (max-width: 455px) {
+  .connection__phone + .connection__phone {
+    margin-left: 0px;
+  }
   .header__phones .header__phone-ico {
     left: 0px;
   }
@@ -1240,12 +1263,12 @@ html, body {
   }
   .connection__inner {
     display: block;
-    padding: 0 35px;
   }
   .connection__link {
     display: block;
     width: 100%;
     text-align: center;
+    margin-top: 25px;
   }
   .connection .connection__adress img,
   .connection__mail img,

@@ -76,15 +76,34 @@
   }
 }
 @media (max-width: 900px) {
+  .connection {
+    &__adress {
+      max-width: 100%;
+      margin-bottom: 15px;
+    }
+    &__phones {
+      max-width: 100%;
+      margin-bottom: 15px;
+    }
+    &__mail {
+      max-width: 100%;
+      margin-bottom: 15px;
+    }
+    &__skype {
+      max-width: 100%;
+      margin-bottom: 15px;
+    }
+  }
   .connection__inner {
     display: block;
     column-count: 1;
-    margin-top: 25px;
+  }
     .connection__link {
       display: block;
       text-align: center;
+      margin-top: 25px;
     }
-  }
+  
 }
 @media (max-width: 878px) {
   .header__phone {
@@ -255,6 +274,9 @@
   }
 }
 @media (max-width: 455px) {
+  .connection__phone + .connection__phone {
+    margin-left: 0px;
+  }
   .header__phones .header__phone-ico {
     left: 0px;
   }
@@ -264,12 +286,12 @@
   }
   .connection__inner {
     display: block;
-    padding: 0 35px;
   }
   .connection__link {
     display: block;
     width: 100%;
     text-align: center;
+    margin-top: 25px;
   }
 
   .connection .connection__adress img,
