@@ -549,39 +549,28 @@
 }
 // end parts
 // start connection
-.connection__phone-2 {
-  position: relative;
-  &::before {
-    content: "";
-    position: absolute;
-    background-image: url(../images/icons/map-marker-alt.svg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    width: 22px;
-    height: 22px;
-    top: 0;
-    left: -22px;
+.connection__inner{
+display: flex;
+}
+.connection__box{
+  display: flex;
+  .connection__adress,
+  .connection__phones,
+  .connection__mail,
+  .connection__skype{
+    margin-right: 30px;
   }
 }
 .connection {
   padding: 28px;
   &__inner {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    padding-left: 50px;
+    width: 100%;
+    position: relative;
   }
-  & &__adress,
+  &__adress,
   &__mail,
   &__skype,
   &__phones {
-    position: relative;
-    img {
-      position: absolute;
-      top: 0;
-      left: -30px;
-    }
     a {
       font-size: 14px;
       line-height: 24px;

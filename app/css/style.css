@@ -752,20 +752,23 @@ html, body {
   margin-left: 115px;
 }
 
-.connection__phone-2 {
-  position: relative;
+.connection__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
-.connection__phone-2::before {
-  content: "";
-  position: absolute;
-  background-image: url(../images/icons/map-marker-alt.svg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  width: 22px;
-  height: 22px;
-  top: 0;
-  left: -22px;
+.connection__box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.connection__box .connection__adress,
+.connection__box .connection__phones,
+.connection__box .connection__mail,
+.connection__box .connection__skype {
+  margin-right: 30px;
 }
 
 .connection {
@@ -773,31 +776,11 @@ html, body {
 }
 
 .connection__inner {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  padding-left: 50px;
-}
-
-.connection .connection__adress, .connection__mail, .connection__skype, .connection__phones {
+  width: 100%;
   position: relative;
 }
 
-.connection .connection__adress img, .connection__mail img, .connection__skype img, .connection__phones img {
-  position: absolute;
-  top: 0;
-  left: -30px;
-}
-
-.connection .connection__adress a, .connection__mail a, .connection__skype a, .connection__phones a {
+.connection__adress a, .connection__mail a, .connection__skype a, .connection__phones a {
   font-size: 14px;
   line-height: 24px;
   color: #000000;
@@ -1103,13 +1086,63 @@ html, body {
 }
 
 @media (max-width: 1400px) {
-  .promo .slick-prev,
-  .promo .slick-next {
+  .connection__box .connection__adress,
+  .connection__box .connection__phones,
+  .connection__box .connection__mail,
+  .connection__box .connection__skype {
+    margin-right: 0;
+  }
+  .connection__link {
+    display: block;
+    text-align: center;
+    margin-top: 25px;
+  }
+  .connection__adress {
+    max-width: 100%;
+    margin-bottom: 15px;
+    white-space: nowrap;
+  }
+  .connection__phones {
+    max-width: 100%;
+    margin-bottom: 15px;
+  }
+  .connection__mail {
+    max-width: 100%;
+    margin-bottom: 15px;
+  }
+  .connection__skype {
+    max-width: 100%;
+    margin-bottom: 15px;
+  }
+  .connection .connection__inner {
+    display: block;
+    -webkit-column-count: 1;
+       -moz-column-count: 1;
+            column-count: 1;
+  }
+  .connection .connection__link {
+    display: block;
+    text-align: center;
+    margin-top: 25px;
+  }
+  .connection .promo .slick-prev,
+  .connection .promo .slick-next {
     display: none;
   }
-  .slick-prev,
-  .slick-next {
+  .connection .slick-prev,
+  .connection .slick-next {
     display: none;
+  }
+  .connection .connection__box {
+    display: inline-block;
+  }
+  .connection .connection__box:first-child {
+    margin-right: 30px;
+  }
+  .connection .connection__link {
+    position: absolute;
+    right: 0;
+    top: 0;
   }
 }
 
@@ -1160,22 +1193,17 @@ html, body {
     flex-basis: calc(49% - 30px);
     margin-bottom: 30px;
   }
-  .connection__inner {
-    -webkit-column-gap: 50px;
-       -moz-column-gap: 50px;
-            column-gap: 50px;
-  }
   .connection__adress {
-    max-width: 250px;
+    max-width: 100%;
   }
   .connection__skype {
-    max-width: 87px;
+    max-width: 100%;
   }
   .connection__mail {
-    max-width: 160px;
+    max-width: 100%;
   }
   .connection__phones {
-    max-width: 280px;
+    max-width: 100%;
   }
   .questions {
     padding: 0px;
@@ -1249,13 +1277,6 @@ html, body {
   .header__phones .header__phone-ico {
     left: 0;
   }
-  .connection__inner {
-    display: block;
-    text-align: center;
-    -webkit-column-count: 0;
-       -moz-column-count: 0;
-            column-count: 0;
-  }
 }
 
 @media (max-width: 769px) {
@@ -1297,6 +1318,12 @@ html, body {
   .slider-dots {
     display: none;
   }
+  .products__items {
+    display: block;
+  }
+  .connection .connection__link {
+    position: static;
+  }
 }
 
 @media (max-width: 683px) {
@@ -1315,6 +1342,11 @@ html, body {
   .parts__box {
     text-align: center;
     display: block;
+  }
+  .parts__box.products__item-box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
   .footer__copy {
     display: inline-block;
@@ -1410,9 +1442,6 @@ html, body {
     padding-left: 0px;
     padding-right: 0px;
   }
-  .connection__phone + .connection__phone {
-    margin-left: 0px;
-  }
   .header__phones .header__phone-ico {
     left: 0;
   }
@@ -1429,14 +1458,32 @@ html, body {
     text-align: center;
     margin-top: 25px;
   }
+  .questions__title {
+    line-height: 24px;
+  }
+}
+
+@media (max-width: 400px) {
+  .connection__phone + .connection__phone {
+    margin-left: 0px;
+  }
+  .connection {
+    padding: 30px 16px;
+  }
+  .connection .connection__adress a,
+  .connection__mail a,
+  .connection__skype a,
+  .connection__phones a {
+    position: relative;
+    padding-left: 15px;
+  }
   .connection .connection__adress img,
   .connection__mail img,
   .connection__skype img,
   .connection__phones img {
-    left: -25px;
-  }
-  .questions__title {
-    line-height: 24px;
+    position: absolute;
+    right: 0;
+    left: 0;
   }
 }
 
