@@ -3,13 +3,24 @@
 @import "_fonts";
 
 // start header
+.header__inner-box{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__navigation{
+  padding-left: 60px;
+  padding-right: 69px;
+}
 .header {
   padding: 20px 40px;
   position: fixed;
-  z-index: 1;
+  z-index: 100;
   background: #fff;
   display: block;
   width: 100%;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+
   &__inner {
     display: flex;
     align-items: center;
@@ -33,23 +44,22 @@
     position: relative;
     transition: all 0.3s;
     img {
-      display: none;
+      position: absolute;
+      top: 0;
+      left: -30px;
+      display: block;
     }
     &:hover {
       color: $blue;
-      img {
-        position: absolute;
-        top: 0;
-        left: -30px;
-        display: block;
-      }
     }
   }
   &__phones {
     position: relative;
+    padding-right: 30px;
+    line-height: 0;
     .header__phone-ico {
       position: absolute;
-      top: 60%;
+      top: 53%;
       left: -20px;
       transform: translate(-50%, -50%);
     }
@@ -62,6 +72,7 @@
     color: #333333;
   }
   &__call {
+    margin-right: 30px;
     font-weight: bold;
     font-size: 13px;
     line-height: 24px;
@@ -95,7 +106,6 @@
   .jq-selectbox__select-text {
     display: block;
     padding: 5px;
-    width: 40px;
     font-weight: bold;
     font-size: 13px;
     line-height: 24px;
@@ -305,7 +315,7 @@
   .slick-prev,
   .slick-next {
     top: 160px;
-    z-index: 1001;
+    z-index: 1;
   }
   .slick-prev,
   .slick-next {
@@ -377,7 +387,7 @@
   &__inner {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     flex-wrap: wrap;
     padding: 10px;
   }
@@ -441,7 +451,9 @@
 // start parts
 .parts {
   padding: 88px 100px;
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.02), rgba(0, 0, 0, 0.02)), #F9F9FD;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
   &__title {
     text-align: center;
     font-weight: bold;
@@ -478,7 +490,7 @@
   }
   &__box {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     margin: 15px 0;
     &-price {
@@ -537,10 +549,10 @@
 }
 // end parts
 // start connection
-.connection__phone-2{
-    position: relative;
-  &::before{
-    content: '';
+.connection__phone-2 {
+  position: relative;
+  &::before {
+    content: "";
     position: absolute;
     background-image: url(../images/icons/map-marker-alt.svg);
     background-size: cover;
@@ -604,8 +616,12 @@
     }
   }
 }
-.connection__mail a{
+.connection__mail a {
   border-bottom: 1px dashed $blue;
+  transition: all 0.3s;
+  &:hover {
+    color: $blue;
+  }
 }
 // end connection
 // start footer
@@ -649,6 +665,13 @@
     text-align: center;
     margin: 7px 0 22px;
     color: #000000;
+  }
+}
+@-moz-document url-prefix() {
+  .feedback__wrapper {
+    input {
+      padding: 13px 0 0 29px;
+    }
   }
 }
 .feedback__wrapper {
@@ -708,4 +731,100 @@
   border-radius: 50%;
 }
 // end popup
+// start title
+.title {
+  background-image: url(../images/content/title-bg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-top: 99px;
+  text-align: center;
+  min-height: 200px;
+  &__title {
+    font-size: 40px;
+    line-height: 44px;
+    text-align: center;
+    color: #ffffff;
+    margin: 7px 0 16px;
+  }
+  img {
+    display: block;
+    margin: 0 auto;
+  }
+}
+.breadcrumbs {
+  &__inner {
+    overflow: hidden;
+    padding-top: 50px;
+  }
+  &__list {
+    li {
+      display: inline-block;
+      position: relative;
+      & + li {
+        padding-left: 50px;
+        &:before {
+          content: "/";
+          position: absolute;
+          left: 20px;
+          color: #fff;
+          top: 2px;
+        }
+      }
+      a {
+        font-size: 14px;
+        line-height: 24px;
+        text-align: center;
+        color: #ffffff;
+      }
+    }
+  }
+}
+
+// end title
+// start products
+.products {
+  img {
+    width: 100%;
+  }
+  .parts__item {
+    margin: 0 0 30px 30px;
+  }
+  background-color: #f4f4f8;
+  padding: 80px 39px 100px;
+  &__title {
+    padding: 7px 2px;
+    font-size: 24px;
+    line-height: 32px;
+    text-align: center;
+    color: #ffffff;
+    background: #3dbaf2;
+    display: block;
+    margin-bottom: 40px;
+    &--spare {
+      background: #929aab;
+    }
+  }
+  &__items {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-left: -30px;
+    margin-bottom: 70px;
+    flex-wrap: wrap;
+  }
+  &__item {
+    max-width: 350px;
+    padding: 0;
+    flex-basis: calc(50% - 30px);
+    &--spare {
+      flex-basis: calc(33% - 30px);
+      margin-bottom: 30px;
+    }
+    &-title {
+      display: inherit;
+    }
+  }
+}
+// end products
 @import "_media";

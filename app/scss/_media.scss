@@ -9,14 +9,17 @@
   }
 }
 @media (max-width: 1285px) {
+  .products {
+    .parts__item {
+      max-width: 100%;
+    }
+  }
   .parts__item {
     max-width: 260px;
   }
   .parts__box-price {
     font-size: 17px;
   }
-}
-@media (max-width: 1285px) {
   .connection .connection__adress,
   .connection__mail,
   .connection__skype,
@@ -30,12 +33,23 @@
     column-gap: 110px;
   }
 }
+@media (max-width: 1200px) {
+  .header__navigation {
+    padding-left: 60px;
+    padding-right: 40px;
+  }
+}
 @media (max-width: 1130px) {
   .header__mail {
     display: none;
   }
 }
 @media (max-width: 1050px) {
+  .products__item--spare {
+    -ms-flex-preferred-size: calc(32% - 30px);
+    flex-basis: calc(49% - 30px);
+    margin-bottom: 30px;
+  }
   .connection__inner {
     column-gap: 50px;
   }
@@ -55,7 +69,10 @@
     padding: 0px;
   }
   .menu__list-item + .menu__list-item {
-    margin-left: 5px;
+    margin-left: 20px;
+  }
+  .menu__list-item:last-child {
+    margin-right: 0;
   }
 }
 @media (max-width: 961px) {
@@ -73,6 +90,14 @@
     .advertising {
       padding: 31px 38px;
     }
+  }
+}
+@media (max-width: 955px) {
+  .header__phone {
+    display: none;
+  }
+  .header__call {
+    display: none;
   }
 }
 @media (max-width: 900px) {
@@ -98,17 +123,13 @@
     display: block;
     column-count: 1;
   }
-    .connection__link {
-      display: block;
-      text-align: center;
-      margin-top: 25px;
-    }
-  
+  .connection__link {
+    display: block;
+    text-align: center;
+    margin-top: 25px;
+  }
 }
 @media (max-width: 878px) {
-  .header__phone {
-    display: none;
-  }
   .header__phones .header__phone-ico {
     left: 0;
   }
@@ -142,9 +163,7 @@
     font-size: 24px;
     line-height: 32px;
   }
-  .header__call {
-    display: none;
-  }
+
   .header__phones img {
     left: 45px;
   }
@@ -155,14 +174,8 @@
   .questions__title {
     max-width: 100%;
   }
-  .header__phones .header__phone-ico {
-    left: 60px;
-  }
 }
 @media (max-width: 700px) {
-  .header__phones .header__phone-ico {
-    left: 45px;
-  }
   .slider-dots {
     display: none;
   }
@@ -173,9 +186,6 @@
   }
 }
 @media (max-width: 654px) {
-  .header__phones .header__phone-ico {
-    left: 20px;
-  }
   .footer__inner {
     display: block;
   }
@@ -192,28 +202,16 @@
   }
 }
 
-@media (max-width: 561px) {
-  .header__phones .header__phone-ico {
-    left: 60px;
-  }
-  .promo .advertising__title {
-    font-size: 18px;
-    line-height: 26px;
-  }
-  .promo {
-    background-image: url(../images/content/slider-560.png);
-    .advertising {
-      padding: 31px 28px;
-    }
-  }
-  .promo .advertising__text {
-    font-weight: normal;
-  }
-  .dignities__item {
-    flex-basis: 49%;
-  }
+@media (max-width: 615px) {
   .header__logo {
     margin-left: 50px;
+  }
+
+  .menu__btn span {
+    display: block;
+    margin-bottom: 5px;
+    background: #929aab;
+    height: 2px;
   }
   .menu__btn {
     display: block;
@@ -223,12 +221,6 @@
     position: absolute;
     left: 40px;
     top: 34px;
-  }
-  .menu__btn span {
-    display: block;
-    margin-bottom: 5px;
-    background: #929aab;
-    height: 2px;
   }
   .menu__list {
     display: none;
@@ -254,14 +246,30 @@
       }
     }
   }
+}
+@media (max-width: 561px) {
+  .promo .advertising__title {
+    font-size: 18px;
+    line-height: 26px;
+  }
+  .promo {
+    background-image: url(../images/content/slider-560.png);
+    .advertising {
+      padding: 31px 28px;
+    }
+  }
+  .promo .advertising__text {
+    font-weight: normal;
+  }
+  .dignities__item {
+    flex-basis: 49%;
+  }
+
   .header__phones img {
     left: 75px;
   }
 }
 @media (max-width: 500px) {
-  .header__phones .header__phone-ico {
-    left: 50px;
-  }
   .parts__item {
     max-width: 100%;
     margin: 0 auto;
@@ -274,11 +282,15 @@
   }
 }
 @media (max-width: 455px) {
+  .header__navigation {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
   .connection__phone + .connection__phone {
     margin-left: 0px;
   }
   .header__phones .header__phone-ico {
-    left: 0px;
+    left: 0;
   }
   .dignities__inner {
     display: block;
@@ -315,7 +327,7 @@
     }
   }
 }
-@media (min-width: 561px) {
+@media (min-width: 616px) {
   .menu__list {
     display: flex !important;
   }
