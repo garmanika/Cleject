@@ -1108,6 +1108,92 @@ html, body {
   background-size: contain;
 }
 
+.product {
+  background: #f4f4f8;
+  padding: 75px 38px 100px 39px;
+}
+
+.product .product-promo__image {
+  display: block;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  max-width: 540px;
+  width: 100%;
+  min-height: 413px;
+}
+
+.product .product-promo__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.product-promo__info {
+  max-width: 540px;
+  width: 100%;
+}
+
+.product-promo__info-text {
+  font-size: 16px;
+  line-height: 24px;
+  color: #333333;
+}
+
+.product-promo__info-text span {
+  display: block;
+  padding-top: 22px;
+  margin-bottom: 12px;
+}
+
+.product-promo__info-documents {
+  border-bottom: 1px dashed #3dbaf2;
+  margin-left: 32px;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 24px;
+  color: #333333;
+  position: relative;
+  max-width: 152px;
+  display: block;
+  margin-bottom: 42px;
+}
+
+.product-promo__info-documents::before {
+  content: "";
+  position: absolute;
+  background-image: url(../images/icons/document.svg);
+  width: 24px;
+  height: 24px;
+  left: -36px;
+}
+
+.product-promo__info-link {
+  font-size: 14px;
+  line-height: 24px;
+  border-radius: 3333px;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.product-promo__info-link--buy {
+  background: #3dbaf2;
+  padding: 12px 73px;
+}
+
+.product-promo__info-link--consult {
+  background: #929aab;
+  padding: 12px 30px;
+}
+
 @media (max-width: 1400px) {
   .connection__box .connection__adress,
   .connection__box .connection__phones,
@@ -1467,6 +1553,13 @@ html, body {
 }
 
 @media (max-width: 500px) {
+  .title__title {
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 32px;
+    text-align: center;
+    color: #ffffff;
+  }
   .parts__item {
     max-width: 100%;
     margin: 0 auto;

@@ -333,6 +333,13 @@
   }
 }
 @media (max-width: 500px) {
+  .title__title {
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 32px;
+    text-align: center;
+    color: #ffffff;
+  }
   .parts__item {
     max-width: 100%;
     margin: 0 auto;
