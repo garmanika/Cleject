@@ -766,11 +766,11 @@
         }
       }
       & + li {
-        padding-left: 50px;
+        padding-left: 30px;
         &:before {
           content: "/";
           position: absolute;
-          left: 20px;
+          left: 13px;
           color: #fff;
           top: 2px;
         }
@@ -842,7 +842,28 @@
 .product {
   background: #f4f4f8;
   padding: 75px 38px 100px 39px;
+  &__image {
+    display: block;
+    margin: 0 auto;
+    max-width: 730px;
+    min-height: 556px;
+    padding-top: 39px;
+    padding-bottom: 44px;
+  }
+  &__text {
+    font-size: 16px;
+    line-height: 24px;
+    color: #333333;
+    span {
+      display: block;
+      padding-top: 22px;
+      &.product__text-last {
+        padding-top: 0;
+      }
+    }
+  }
   .product-promo__image {
+    margin-right: 30px;
     display: block;
     background-position: center;
     background-repeat: no-repeat;
@@ -860,9 +881,6 @@
     max-width: 540px;
     width: 100%;
     &-text {
-      font-size: 16px;
-      line-height: 24px;
-      color: #333333;
       span {
         display: block;
         padding-top: 22px;
@@ -907,6 +925,59 @@
       }
     }
   }
+}
+.product__text-images {
+  float: right;
+  max-width: 540px;
+  min-height: 413px;
+  margin-left: 30px;
+  &::after {
+    clear: both;
+  }
+}
+
+.product__content-items {
+  margin-top: 83px;
+  margin-bottom: 55px;
+  border: 2px solid #eeeeee;
+}
+.product__content-item {
+  display: flex;
+  height: 42px;
+  align-items: center;
+  font-size: 13px;
+  color: #333;
+
+  &:nth-child(2n + 1) {
+    background-color: #f9f9f9;
+  }
+}
+.product__content-name {
+  width: 100%;
+  padding: 11px 30px 13px 30px;
+  color: #ffffff;
+  background: #3dbaf2;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 24px;
+}
+.product__content-text {
+  width: 100%;
+  padding: 10px 29px;
+  font-size: 14px;
+  line-height: 28px;
+}
+.product__box {
+  padding-top: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.product__link {
+  margin-right: 15px;
+}
+.product__text-info {
+  margin-top: 48px;
 }
 // end product
 @import "_media";
