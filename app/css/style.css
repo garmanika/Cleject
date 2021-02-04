@@ -1307,6 +1307,77 @@ html, body {
   min-height: 435px;
 }
 
+.contacts {
+  position: relative;
+}
+
+.contacts__map {
+  background-image: url(../images/content/contacts.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 540px;
+  position: relative;
+}
+
+.contacts__box {
+  position: absolute;
+  top: 25%;
+  background: rgba(255, 255, 255, 0.95);
+  max-width: 540px;
+  padding: 53px 40px 59px 34px;
+}
+
+.contacts__title {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 24px;
+  color: #333333;
+  margin-bottom: 24px;
+}
+
+.contacts__info {
+  position: relative;
+}
+
+.contacts__info::before {
+  position: absolute;
+  content: "";
+  width: 24px;
+  height: 24px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.contacts__info a {
+  font-size: 18px;
+  line-height: 24px;
+  color: #333333;
+  margin-bottom: 27px;
+  margin-left: 43px;
+}
+
+.contacts__info-documents::before {
+  background-image: url(../images/icons/document.svg);
+}
+
+.contacts__info-map::before {
+  background-image: url(../images/icons/map-marker-alt.svg);
+}
+
+.contacts__info-telefon::before {
+  background-image: url(../images/icons/phone.svg);
+}
+
+.contacts__info-mail::before {
+  background-image: url(../images/icons/mail.svg);
+}
+
+.contacts__info-telefon a:nth-child(n + 2) {
+  margin-left: 0;
+}
+
 @media (max-width: 1400px) {
   .connection__box .connection__adress,
   .connection__box .connection__phones,
@@ -1578,6 +1649,13 @@ html, body {
 }
 
 @media (max-width: 769px) {
+  .contacts__map {
+    background-image: url(../images/content/contacts-768.png);
+  }
+  .contacts__box {
+    position: static;
+    padding: 41px 39px 45px 36px;
+  }
   .about__box {
     padding: 65px 39px 63px 40px;
   }
@@ -1824,6 +1902,12 @@ html, body {
 }
 
 @media (max-width: 455px) {
+  .contacts__info-telefon a:nth-child(n + 2) {
+    margin-left: 36px;
+  }
+  .contacts__info a {
+    margin-left: 36px;
+  }
   .product-promo__info-link {
     max-width: 286px;
     margin-bottom: 14px;
@@ -1866,6 +1950,13 @@ html, body {
 }
 
 @media (max-width: 321px) {
+  .contacts__box {
+    position: static;
+    padding: 34px 43px 32px 12px;
+  }
+  .contacts__map {
+    background-image: url(../images/content/contacts-320.png);
+  }
   .about__box img {
     min-height: 366px;
     max-width: 100%;

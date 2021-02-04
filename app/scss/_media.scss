@@ -249,6 +249,13 @@
   }
 }
 @media (max-width: 769px) {
+  .contacts__map {
+    background-image: url(../images/content/contacts-768.png);
+  }
+  .contacts__box {
+    position: static;
+    padding: 41px 39px 45px 36px;
+  }
   .about__box {
     padding: 65px 39px 63px 40px;
   }
@@ -482,6 +489,12 @@
   }
 }
 @media (max-width: 455px) {
+  .contacts__info-telefon a:nth-child(n + 2) {
+    margin-left: 36px;
+  }
+  .contacts__info a {
+    margin-left: 36px;
+  }
   .product-promo__info-link {
     max-width: 286px;
     margin-bottom: 14px;
@@ -525,7 +538,14 @@
   }
 }
 @media (max-width: 321px) {
-  .about__box img{
+  .contacts__box {
+    position: static;
+    padding: 34px 43px 32px 12px;
+  }
+  .contacts__map {
+    background-image: url(../images/content/contacts-320.png);
+  }
+  .about__box img {
     min-height: 366px;
     max-width: 100%;
   }
