@@ -35,7 +35,7 @@
     .connection__link {
       display: block;
       text-align: center;
-      margin-top: 25px;
+      margin-top: 20px;
     }
     .promo .slick-prev,
     .promo .slick-next {
@@ -124,6 +124,19 @@
   }
 }
 @media (max-width: 961px) {
+  .connection .connection__adress,
+  .connection__mail,
+  .connection__skype,
+  .connection__phones {
+    position: relative;
+    a {
+      margin-left: 15px;
+    }
+    img {
+      position: absolute;
+      left: -10px;
+    }
+  }
   .parts__box-more {
     padding: 6px 6px;
   }
@@ -171,11 +184,6 @@
     display: block;
     column-count: 1;
   }
-  .connection__link {
-    display: block;
-    text-align: center;
-    margin-top: 25px;
-  }
 }
 @media (max-width: 878px) {
   .header__phones .header__phone-ico {
@@ -218,6 +226,10 @@
   }
 }
 @media (max-width: 700px) {
+  .products__item {
+    flex-basis: 100%;
+    max-width: 100%;
+  }
   .slider-dots {
     display: none;
   }
@@ -363,22 +375,8 @@
   .connection__phone + .connection__phone {
     margin-left: 0px;
   }
-  .connection{
+  .connection {
     padding: 30px 16px;
-  }
-  .connection .connection__adress,
-  .connection__mail,
-  .connection__skype,
-  .connection__phones {
-    a {
-      position: relative;
-      padding-left: 15px;
-    }
-    img {
-      position: absolute;
-      right: 0;
-      left: 0;
-    }
   }
 }
 @media (max-width: 321px) {
